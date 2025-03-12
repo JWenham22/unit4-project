@@ -1,0 +1,16 @@
+h1 {
+    margin: 10px;
+}
+
+.img-content {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 600px;
+    height: auto;
+    margin: 10px;
+}
+
+  

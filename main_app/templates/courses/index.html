@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/courses/course-index.css' %}"/>
+{% endblock %}
+
+
+{% block content %}
+    <section class="page-header">
+        <h1>Top Courses</h1>
+        <div class="img-content">
+            <img src="{% static 'images/1573512242882.avif' %}" alt="Pine Valley South Golf Course" />
+            <img src="{% static 'images/Old Course - Home End-min.webp' %}" alt="The Old Course at St. Andrews" />
+            <img src="{% static 'images/augusta.jpg' %}" alt="Augusta National" />
+            <img src="{% static 'images/08aPBGL20-1mm0100Hc-900x600.jpg' %}" alt="Pebble Beach" />
+        </div>
+    </section>
+    <section class="card-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img-container">
+                </div>
+                <h2 class="card-title">{{ course.name }}</h2>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+    
+    

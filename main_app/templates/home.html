@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+{% endblock %}
+
+
+{% block content %}
+    <div class="center-container">
+        <img src="{% static 'images/4k-golf-course-4000-x-2648-background-lrgss04gbesx4twz.webp' %}" alt="Main Page Image" class="home-img"/>
+    </div>
+    <div class="home-content">
+        <p>Welcome to CourseRate! Here you will be able to views some of the top courses
+            worldwide, add courses to your wishlist as well as rate courses that you have 
+            played at, giving others the oppurtunity to view course ratings.
+        </p>
+    </div>
+{% endblock %}
+    
+    

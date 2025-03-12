@@ -1,0 +1,14 @@
+.center-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    height: 100vh; /* Full screen height */
+}
+
+.home-img {
+    width: 1100px;
+    height: 600px;
+}
+
+.home-content {
+    
+}
