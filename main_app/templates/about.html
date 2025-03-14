@@ -1,11 +1,46 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <h1>About CourseRate</h1>
-    <hr />
-    <p class="page-content">
-        This is a great website to be able to lookup any course 
-        you like and be able to see reviews and rates.
-    </p>
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}"/>
 {% endblock %}
-    
+
+{% block content %}
+    <section class="about-header">
+        <h1>About CourseRate</h1>
+        <p>Your ultimate golf course review platform! ⛳</p>
+    </section>
+
+    <hr class="divider"/>
+
+    <section class="about-content">
+        <p>
+            **CourseRate** allows golfers to explore **top-rated golf courses worldwide**,  
+            share their experiences, and discover **hidden gems** in the golfing world.  
+            Whether you're looking for professional courses or local favorites,  
+            CourseRate is your go-to destination!
+        </p>
+
+        <h2>🌟 Features</h2>
+        <ul class="features-list">
+            <li>🏌️‍♂️ Discover **Top Golf Courses** worldwide</li>
+            <li>⭐ Rate and review courses you’ve played at</li>
+            <li>📍 Add courses to your personal **wishlist**</li>
+            <li>📝 Create your own course listings</li>
+            <li>🔍 Search and explore **detailed course information**</li>
+        </ul>
+
+        <h2>📢 Why Use CourseRate?</h2>
+        <p>
+            Whether you're a beginner or a **PGA pro**, our platform helps  
+            you find the **perfect course** based on real golfer reviews and ratings.  
+            Start exploring today and share your experience with others!
+        </p>
+
+        <div class="cta-container">
+            <a href="{% url 'course-index' %}" class="cta-btn">Explore Courses</a>
+            <a href="{% url 'register' %}" class="cta-btn">Join Now</a>
+        </div>
+    </section>
+{% endblock %}

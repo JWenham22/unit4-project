@@ -19,13 +19,25 @@
           <span class="site-title">CourseRate</span>
         </div>
         <ul class="nav-links">
-          <li><a href="/" class="button">Home</a></li>
-          <li><a href="/about" class="button">About</a></li>
-          <li><a href="/courses" class="button">Top Courses</a></li>
-          <li><a href="{% url 'course-create' %}" class="button">Add Course</a></li>
+          <li><a href="{% url 'home' %}" class="button">Home</a></li>
+          <li><a href="{% url 'about' %}" class="button">About</a></li>
+          <li><a href="{% url 'course-index' %}" class="button">Top Courses</a></li>
+    
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'user-courses' %}" class="button">My Courses</a></li>
+            <li><a href="{% url 'course-create' %}" class="button">Add Course</a></li>
+            <form action="{% url 'logout' %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="button">Logout</button>
+            </form>
+          
+          {% else %}
+            <li><a href="{% url 'login' %}" class="button">Login</a></li>
+            <li><a href="{% url 'register' %}" class="button">Sign Up</a></li>
+          {% endif %}
         </ul>
       </nav>
-    </header>
+    </header>        
     
     <main>
       {% block content %} 

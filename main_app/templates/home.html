@@ -5,17 +5,24 @@
     <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
 {% endblock %}
 
-
 {% block content %}
     <div class="center-container">
-        <img src="{% static 'images/4k-golf-course-4000-x-2648-background-lrgss04gbesx4twz.webp' %}" alt="Main Page Image" class="home-img"/>
-    </div>
-    <div class="home-content">
-        <p>Welcome to CourseRate! Here you will be able to views some of the top courses
-            worldwide, add courses to your wishlist as well as rate courses that you have 
-            played at, giving others the oppurtunity to view course ratings.
-        </p>
+        <img src="{% static 'images/4k-golf-course-4000-x-2648-background-lrgss04gbesx4twz.webp' %}" 
+             alt="Main Page Image" class="home-img"/>
+
+        <div class="home-content">
+            <h1>Welcome to CourseRate! ⛳</h1>
+            <p>
+                Discover the **top golf courses worldwide**, add courses to your **wishlist**, 
+                and **rate the courses** you've played. 
+                Help fellow golfers find the best experiences!
+            </p>
+
+            {% if user.is_authenticated %}
+                <a href="{% url 'course-create' %}" class="home-btn">Add Your Course</a>
+            {% else %}
+                <a href="{% url 'register' %}" class="home-btn">Get Started</a>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}
-    
-    
