@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/courses/course-form.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <section class="page-header">
+        <h1>Add a New Course</h1>
+    </section>
+
+    <section class="form-container">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+        <a href="{% url 'course-index' %}">Back to Courses</a>
+    </section>
+{% endblock %}

@@ -5,26 +5,28 @@
     <link rel="stylesheet" href="{% static 'css/courses/course-index.css' %}"/>
 {% endblock %}
 
-
 {% block content %}
     <section class="page-header">
         <h1>Top Courses</h1>
-        <div class="img-content">
-            <img src="{% static 'images/1573512242882.avif' %}" alt="Pine Valley South Golf Course" />
-            <img src="{% static 'images/Old Course - Home End-min.webp' %}" alt="The Old Course at St. Andrews" />
-            <img src="{% static 'images/augusta.jpg' %}" alt="Augusta National" />
-            <img src="{% static 'images/08aPBGL20-1mm0100Hc-900x600.jpg' %}" alt="Pebble Beach" />
-        </div>
     </section>
+
+    <!-- Course Cards -->
     <section class="card-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="card-img-container">
-                </div>
-                <h2 class="card-title">{{ course.name }}</h2>
+        {% for course in courses %}
+            <div class="card">
+                <a href="{% url 'course-detail' course.id %}">
+                    <div class="card-img-container">
+                        {% if course.image_url %}
+                            <img src="{{ course.image_url }}" alt="{{ course.name }}">
+                        {% else %}
+                            <img src="{% static 'images/default-course.jpg' %}" alt="Default Course Image">
+                        {% endif %}
+                    </div>
+                </a>
+                <h2 class="card-title">
+                    <a href="{% url 'course-detail' course.id %}">{{ course.name }}</a>
+                </h2>
             </div>
-        </div>
+        {% endfor %}
     </section>
 {% endblock %}
-    
-    
