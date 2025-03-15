@@ -90,6 +90,3 @@ class CourseDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == course.user  # Only allow owner to delete
     
 
-
-
-
