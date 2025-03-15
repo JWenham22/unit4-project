@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.form-container label {
+    color: black;
+}
+
 .form-container form {
     display: flex;
     flex-direction: column;
