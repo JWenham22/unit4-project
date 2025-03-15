@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     <link rel="shortcut icon" type="image/png" href="" />
     <title>CourseRate</title>
     {% block head %} 
@@ -25,15 +25,17 @@
     
           {% if user.is_authenticated %}
             <li><a href="{% url 'user-courses' %}" class="button">My Courses</a></li>
-            <li><a href="{% url 'course-create' %}" class="button">Add Course</a></li>
-            <form action="{% url 'logout' %}" method="post">
-              {% csrf_token %}
-              <button type="submit" class="button">Logout</button>
-            </form>
+            <li><a href="{% url 'course-create' %}" class="button">Add a Course</a></li>
+            <li>
+              <form action="{% url 'logout' %}" method="post" class="logout-form">
+                {% csrf_token %}
+                <button type="submit" class="button">Logout</button>
+              </form>
+            </li>
           
           {% else %}
             <li><a href="{% url 'login' %}" class="button">Login</a></li>
-            <li><a href="{% url 'register' %}" class="button">Sign Up</a></li>
+            <li><a href="{% url 'signup' %}" class="button">Sign Up</a></li>
           {% endif %}
         </ul>
       </nav>

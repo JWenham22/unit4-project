@@ -31,7 +31,7 @@ from django.urls import reverse_lazy
 # Create your views here.
 
 
-def register(request):
+def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -41,7 +41,7 @@ def register(request):
     else:
         form = UserCreationForm()
     
-    return render(request, 'users/register.html', {'form': form})
+    return render(request, 'users/signup.html', {'form': form})
 
 
 def home(request):
@@ -51,29 +51,17 @@ def about(request):
     return render(request, 'about.html')
 
 def course_index(request):
-    courses = Course.objects.filter(is_top_course=True)  # Get all courses
+    courses = Course.objects.all()
     return render(request, 'courses/index.html', {'courses': courses})
 
 @login_required
 def user_courses(request):
-    courses = Course.objects.filter(user=request.user)  # Only show courses created by logged-in user
+    courses = Course.objects.filter(user=request.user) 
     return render(request, 'courses/user_courses.html', {'courses': courses})
 
 def course_detail(request, course_id):
-    # course = Course.objects.get(id=course_id)
-    course = get_object_or_404(Course, id=course_id)
+    course = Course.objects.get(id=course_id)
     return render(request, 'courses/detail.html', {'course': course} )
-
-# def course_create(request):
-#     if request.method == 'POST':
-#         form = CourseForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('course-index') 
-#     else:
-#         form = CourseForm()
-
-#     return render(request, 'courses/course_form.html', {'form': form})
 
 class CourseCreate(LoginRequiredMixin, CreateView):
     model = Course

@@ -7,7 +7,7 @@
 
 {% block content %}
     <div class="center-container">
-        <img src="{% static 'images/4k-golf-course-4000-x-2648-background-lrgss04gbesx4twz.webp' %}" 
+        <img src="{% static 'images/default-course.jpg.webp' %}" 
              alt="Main Page Image" class="home-img"/>
 
         <div class="home-content">
@@ -19,9 +19,9 @@
             </p>
 
             {% if user.is_authenticated %}
-                <a href="{% url 'course-create' %}" class="home-btn">Add Your Course</a>
+                <a href="{% url 'course-create' %}" class="home-btn">Add a Course</a>
             {% else %}
-                <a href="{% url 'register' %}" class="home-btn">Get Started</a>
+                <a href="{% url 'signup' %}" class="home-btn">Get Started</a>
             {% endif %}
         </div>
     </div>

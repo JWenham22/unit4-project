@@ -26,7 +26,7 @@
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #333;
+    color: black;
 }
 
 /* Features List */
@@ -75,13 +75,3 @@
     background-color: #0056b3;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-content {
-        width: 90%;
-    }
-
-    .features-list {
-        text-align: center;
-    }
-}

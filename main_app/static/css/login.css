@@ -1,0 +1,72 @@
+/* Center the login form */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #1B263B; /* Midnight Blue */
+    color: #E0E1DD; /* Light Gray */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.login-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Form fields */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input fields */
+.login-container input {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #E0E1DD;
+    border-radius: 6px;
+    background: #0D1B2A; /* Dark Navy */
+    color: #E0E1DD;
+    font-size: 1rem;
+}
+
+/* Focus on input fields */
+.login-container input:focus {
+    outline: none;
+    border-color: #778DA9; /* Dusty Blue */
+}
+
+/* Login Button */
+.login-container button {
+    background-color: #415A77; /* Steel Blue */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.login-container button:hover {
+    background-color: #778DA9; /* Dusty Blue */
+}
+
+/* Signup Link */
+.login-container p {
+    margin-top: 15px;
+}
+
+.login-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
