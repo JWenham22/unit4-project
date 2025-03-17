@@ -51,12 +51,14 @@ def about(request):
     return render(request, 'about.html')
 
 def course_index(request):
-    courses = Course.objects.all()
+    """ Show only courses marked as 'Top Courses' """
+    courses = Course.objects.filter(is_top_course=True)  
     return render(request, 'courses/index.html', {'courses': courses})
 
 @login_required
 def user_courses(request):
-    courses = Course.objects.filter(user=request.user) 
+    """ Show only courses created by the logged-in user """
+    courses = Course.objects.filter(user=request.user, is_top_course=False) 
     return render(request, 'courses/user_courses.html', {'courses': courses})
 
 def course_detail(request, course_id):
@@ -65,10 +67,12 @@ def course_detail(request, course_id):
 
 class CourseCreate(LoginRequiredMixin, CreateView):
     model = Course
-    form_class = CourseForm
+    fields = ['name', 'location', 'par', 'description', 'image_url']
 
     def form_valid(self, form):
-        form.instance.user = self.request.user  # Assign logged-in user as course creator
+        """ Ensure the new course is linked to the user and not a Top Course """
+        form.instance.user = self.request.user
+        form.instance.is_top_course = False  
         return super().form_valid(form)
 
 
@@ -82,11 +86,12 @@ class CourseUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class CourseDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Course
-    success_url = reverse_lazy('user-courses')  
+    success_url = reverse_lazy('user-courses')
     template_name = 'courses/course_confirm_delete.html'
 
     def test_func(self):
+        """ Ensure only the course owner can delete and not Top Courses """
         course = self.get_object()
-        return self.request.user == course.user  # Only allow owner to delete
+        return self.request.user == course.user and not course.is_top_course
     
 

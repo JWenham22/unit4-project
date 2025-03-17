@@ -20,9 +20,5 @@
             <p><strong>Par:</strong> {{ course.par }}</p>
             <p><strong>Description:</strong> {{ course.description }}</p>
         </div>
-        <div>
-            <a href="{% url 'course-update' course.id %}" class="btn warn">Edit</a>
-            <a href="{% url 'course-delete' course.id %}" class="btn danger">delete</a>
-        </div>
     </section>
 {% endblock %}
