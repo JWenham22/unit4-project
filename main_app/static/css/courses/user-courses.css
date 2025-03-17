@@ -1,8 +1,121 @@
+/* Center the My Courses section */
+.course-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    max-width: 900px; /* Limit width for better readability */
+    margin: auto;
+    text-align: center;
+    background-color: #1B263B; /* Dark background */
+    color: #E0E1DD; /* Light text */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Centered Header */
+.course-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #E0E1DD;
+}
+
+/* Course list */
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Individual course card */
+.course-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Image container */
+.course-img {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.course-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Course details */
+.course-details {
+    margin-top: 15px;
+}
+
+.course-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #E0E1DD;
+}
+
+.course-details p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+/* Action buttons */
+.course-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.course-actions .btn {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.edit {
+    background-color: #778DA9;
+    color: #E0E1DD;
+}
+
+.edit:hover {
+    background-color: #415A77;
+}
+
+.delete {
+    background-color: #DC3545;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #A71D2A;
+}
+
+/* Empty course container */
 .empty-course-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh; /* Adjusts to center on the page */
+    height: 50vh;
 }
 
 .add-course-btn {
@@ -18,3 +131,5 @@
 .add-course-btn:hover {
     background-color: #0056b3;
 }
+
+

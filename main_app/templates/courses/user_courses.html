@@ -1,35 +1,41 @@
 {% extends 'base.html' %}
 {% block content %}
-    <section class="page-header">
+    <section class="course-container">
         <h1>My Courses</h1>
-    </section>
 
-    {% if courses %}
-        <section class="card-container">
-            {% for course in courses %}
-                <div class="card">
-                    <a href="{% url 'course-detail' course.id %}">
-                        <div class="card-img-container">
-                            {% if course.image_url %}
-                                <img src="{{ course.image_url }}" alt="{{ course.name }}">
-                            {% endif %}
+        {% if courses %}
+            <section class="courses-list">
+                {% for course in courses %}
+                    <div class="course-card">
+                        <a href="{% url 'course-detail' course.id %}">
+                            <div class="course-img">
+                                {% if course.image_url %}
+                                    <img src="{{ course.image_url }}" alt="{{ course.name }}">
+                                {% else %}
+                                    <p>No image available</p>
+                                {% endif %}
+                            </div>
+                        </a>
+                        <div class="course-details">
+                            <h2>{{ course.name }}</h2>
+                            <p><strong>Location:</strong> {{ course.location }}</p>
+                            <p><strong>Par:</strong> {{ course.par }}</p>
+                            <p><strong>Description:</strong> {{ course.description }}</p>
                         </div>
-                    </a>
-                    <h2 class="card-title">
-                        <a href="{% url 'course-detail' course.id %}">{{ course.name }}</a>
-                    </h2>
-                    {% if not course.is_top_course %}
-                        <div class="card-actions">
-                            <a href="{% url 'course-update' course.id %}" class="btn edit">Edit</a>
-                            <a href="{% url 'course-delete' course.id %}" class="btn delete">Delete</a>
-                        </div>
-                    {% endif %}
-                </div>
-            {% endfor %}
-        </section>
-    {% else %}
-        <section class="empty-course-container">
-            <a href="{% url 'course-create' %}" class="btn add-course-btn">+ Add Course</a>
-        </section>
-    {% endif %}
+
+                        {% if not course.is_top_course %}
+                            <div class="course-actions">
+                                <a href="{% url 'course-update' course.id %}" class="btn edit">Edit</a>
+                                <a href="{% url 'course-delete' course.id %}" class="btn delete">Delete</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </section>
+        {% else %}
+            <div class="empty-course-container">
+                <a href="{% url 'course-create' %}" class="btn add-course-btn">+ Add Course</a>
+            </div>
+        {% endif %}
+    </section>
 {% endblock %}
