@@ -24,9 +24,7 @@
   | <h3 align="center">Home Page</h3> | ![image alt](https://github.com/JWenham22/unit4-project/blob/main/Screenshot%202025-03-17%20172915.png?raw=true)
   | <h3 align="center">About Page</h3> | ![image alt](https://github.com/JWenham22/unit4-project/blob/main/Screenshot%202025-03-17%20173016.png?raw=true)
   | <h3 align="center">Top Courses</h3> | ![image alt](https://github.com/JWenham22/unit4-project/blob/main/Screenshot%202025-03-17%20173103.png?raw=true)
-  | <h3 align="center">My Courses</h3> | ![image alt]()
-  
-
+  | <h3 align="center">My Courses</h3> | ![image alt](https://github.com/JWenham22/unit4-project/blob/main/Screenshot%202025-03-17%20173155.png?raw=true)
 
     ## :computer: Technologies Used
   A screenshot of your app's landing page and any other screenshots of interest.
@@ -45,17 +43,24 @@
 ## :fire: Getting Started
 
 <details open>
-  <summary> How to Create a Post </summary>
-    1. Type in your answers to each of the 3 randomly-generated mini-survey questions.
-    2. Click on "Add Survey" to post your responses so others may see them.
-    3. Click on the "X" in the bottom-right corner to delete a post.
+  <summary> Login or Signup </summary>
+    1. If you dont have an account, sign up follwing the criteria.
+    2. If you have an account, login using the correct credentials.
+    3. You will then be redirected to the home page.
 </details>
 
 <details>
-  <summary> How to Interact With Others' Posts </summary>
-    1. Posts may be "liked" or "disliked" by clicking on the thumbs up or down button on their card.
-    2. To reveal the author of a post, hover over the `Who could it possibly be?` button.
-    3. To see more posts by the same user, click on the revealed username and profile picture.
+  <summary> Browse the Top Courses </summary>
+    1. Navigate to the Top Courses page. 
+    2. Once on the Top Courses page, browse some of the top course worldwide.
+    3. Click on a course of your liking and see the course details.
+</details>
+
+<details>
+  <summary> Add a Course </summary>
+    1. Navigate to the Add Courses page.
+    2. Once on the page submit and fill out a form adding the course of your choosing.
+    3. Once the course has been submitted, you can find the course on the my courses page.
 </details>
 
 <details open>
@@ -65,17 +70,11 @@
   >
 </details>
 
-<details open>
-  <summary> Deployed Link (Heroku) </summary>
-  <a href="https://meetyourclassmates.herokuapp.com/"
-    > https://meetyourclassmates.herokuapp.com/ </a
-  >
-</details>
 
 ## :satellite: Upcoming Features
 
-- [:star:] Animations on sliding buttons
+- [⭐:] Add a rate and reviews model - others can see ratings and reviews on each course
 
-- [:x:] Comment functionality on posts to encourage discussion
+- [⭐:] Add a golf course api - Search golf courses worldwide
 
-- [:x:] ~~Tinder API Integration~~
+- [⭐:] Add a course "wishlist" feature - users can add courses to their wishlist of courses they want to play
