@@ -23,7 +23,9 @@
   |:-------------:| -----------|
   | <h3 align="center">Home Page</h3> | ![image alt](https://github.com/JWenham22/unit4-project/blob/main/Screenshot%202025-03-17%20172915.png?raw=true)
   | <h3 align="center">About Page</h3> | ![image alt](https://github.com/JWenham22/unit4-project/blob/main/Screenshot%202025-03-17%20173016.png?raw=true)
-  | <h3 align="center">Top Courses</h3> | ![image alt]()
+  | <h3 align="center">Top Courses</h3> | ![image alt](https://github.com/JWenham22/unit4-project/blob/main/Screenshot%202025-03-17%20173103.png?raw=true)
+  | <h3 align="center">My Courses</h3> | ![image alt]()
+  
 
 
     ## :computer: Technologies Used
