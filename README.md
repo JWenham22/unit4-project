@@ -1,6 +1,6 @@
 <div id="header" align="center">
 
-  ![CourseRate]("C:\Users\Jack W\Pictures\Screenshots\Screenshot 2025-03-17 172915.png")
+  ![image alt]("CourseRate.png")
 
 
 </div>
