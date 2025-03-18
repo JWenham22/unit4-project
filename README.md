@@ -21,11 +21,8 @@
 
   |   Description | Screenshot | 
   |:-------------:| -----------|
-  | <h3 align="center">Home Page</h3> | ![image alt]
-  | <h3 align="center">Profile Page</h3> | <img
-  src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ProfilePage.png"
-  width="700"
-  /> |
+  | <h3 align="center">Home Page</h3> | ![image alt](https://github.com/JWenham22/unit4-project/blob/main/Screenshot%202025-03-17%20172915.png?raw=true)
+  | <h3 align="center">About Page</h3> | ![image alt]()
 
 
     ## :computer: Technologies Used
