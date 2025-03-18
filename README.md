@@ -65,9 +65,9 @@
 
 <details open>
   <summary> Trello Board </summary>
-  <a href="https://trello.com/b/x4ViComX/meet-your-classmates-project-4"
-    > https://trello.com/b/x4ViComX/meet-your-classmates-project-4 </a
-  >
+  <a href="https://trello.com/b/Nur6i918/courserate">
+    https://trello.com/b/Nur6i918/courserate
+  </a>
 </details>
 
 
