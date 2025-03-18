@@ -1,6 +1,7 @@
 <div id="header" align="center">
 
-  <img src="https://i.imgur.com/y2SPx4E.jpg" width="800" height="400">
+  ![CourseRate]("C:\Users\Jack W\Pictures\Screenshots\Screenshot 2025-03-17 172915.png")
+
 
 </div>
 
