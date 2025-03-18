@@ -90,7 +90,6 @@ class CourseDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     template_name = 'courses/course_confirm_delete.html'
 
     def test_func(self):
-        """ Ensure only the course owner can delete and not Top Courses """
         course = self.get_object()
         return self.request.user == course.user and not course.is_top_course
     
