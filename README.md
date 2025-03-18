@@ -1,26 +1,19 @@
 <div id="header" align="center">
 
-  ![image alt]("CourseRate.png")
-
+  ![image alt](https://github.com/JWenham22/unit4-project/blob/main/CourseRate.png?raw=true)
 
 </div>
 
 <div id="description" align="center">
 
-  # Meet Your Classmates
+  # CourseRate
   
-  ### [CLICK TO DEMO](https://meetyourclassmates.herokuapp.com/)
-  
-  ##### Amar Pan
-  
-  [![LinkedIn Badge](https://img.shields.io/badge/-@amarpan-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/amarpan/)
+  ##### Jack Wenham
   
   ## :pencil: Description
   
-  Meet Your Classmates is a hub where students can get to know and relate to their peers via completion of short 3-question
-  mini-surveys. By learning about others' backgrounds, previous experiences, and
-  interests, an atmosphere of community is created that is conducive to higher
-  levels of learning and success.
+  CourseRate is an app dedicated to golf enthusiasts who want to rate and review courses they've played as well as 
+  search courses near them and visit some of the top courses from around the world.
 
 </div>
 
@@ -28,10 +21,7 @@
 
   |   Description | Screenshot | 
   |:-------------:| -----------|
-  | <h3>Feed Page</h3> | <img
-    src="https://github.com/amarpan/meet-your-classmates/blob/main/public/Screenshots/FeedPage.png?raw=true"
-    width="700"
-  /> |
+  | <h3 align="center">Home Page</h3> | ![image alt]
   | <h3 align="center">Profile Page</h3> | <img
   src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ProfilePage.png"
   width="700"
